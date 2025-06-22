@@ -5,5 +5,4 @@
 http-response-jq ^https:\/\/ad\.12306\.cn\/ad\/ser\/getAdList '{   "message": "无广告返回",   "code": "00" }'
 
 [MITM]
-[MITM]
 hostname = %APPEND% ad.12306.cn

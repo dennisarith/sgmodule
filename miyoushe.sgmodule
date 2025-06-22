@@ -1,0 +1,10 @@
+#!name=米游社去开屏
+#!desc=去除米游社开屏广告
+
+[Body Rewrite]
+http-response-jq ^https:\/\/bbs-api\.miyoushe\.com\/apihub\/api\/getAppSplash '.data = "Blocked"'
+http-response-jq ^https:\/\/bbs-api\.miyoushe\.com\/apihub\/api\/window\/prepare '.data = "Blocked"'
+http-response-jq ^https:\/\/bbs-api\.miyoushe\.com\/apihub\/api\/window\/show '.data = "Blocked"'
+
+[MITM]
+hostname = %APPEND% bbs-api.miyoushe.com
